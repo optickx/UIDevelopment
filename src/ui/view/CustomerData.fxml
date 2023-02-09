@@ -7,22 +7,22 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Text?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.control.CustomerDataController">
    <children>
-      <Text layoutX="42.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer Id" />
-      <TextField layoutX="42.0" layoutY="77.0" prefHeight="25.0" prefWidth="181.0" />
-      <Button layoutX="248.0" layoutY="77.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="Search" />
-      <Text layoutX="42.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Accounts" />
-      <TableView layoutX="42.0" layoutY="142.0" prefHeight="200.0" prefWidth="451.0">
+      <Text id="customerIDText" layoutX="42.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer ID" />
+      <TextField id="customerIDTextField" layoutX="42.0" layoutY="65.0" prefHeight="25.0" prefWidth="181.0" />
+      <Button id="btnSearch" layoutX="247.0" layoutY="65.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="Search" />
+      <Text id="accountsTableText" layoutX="42.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Accounts" />
+      <TableView id="accountsTableView" layoutX="46.0" layoutY="133.0" prefHeight="200.0" prefWidth="508.0">
         <columns>
-          <TableColumn prefWidth="152.79998779296875" text="Account number" />
-          <TableColumn prefWidth="64.00006103515625" text="Type" />
-            <TableColumn prefWidth="98.39996337890625" text="Description" />
-            <TableColumn prefWidth="64.0" text="Balance" />
+          <TableColumn prefWidth="176.0" text="Account number" />
+          <TableColumn prefWidth="80.800048828125" text="Type" />
+            <TableColumn prefWidth="131.99993896484375" text="Description" />
+            <TableColumn prefWidth="119.199951171875" text="Balance" />
         </columns>
       </TableView>
-      <Text layoutX="48.0" layoutY="373.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total balance" />
-      <Button layoutX="407.0" layoutY="356.0" mnemonicParsing="false" text="Exit" />
+      <Text id="totalBalanceText" layoutX="48.0" layoutY="373.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total balance" />
+      <Button id="btnExit" layoutX="407.0" layoutY="356.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" text="Exit" />
+      <TextField id="totalBalanceTextField" editable="false" layoutX="149.0" layoutY="356.0" />
    </children>
 </Pane>
