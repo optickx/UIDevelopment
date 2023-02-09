@@ -1,26 +1,29 @@
 package ui.control;
 
-import java.util.logging.Logger;
-
+import clientside.model.Account;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
 /**
  * @author dani
  */
-public class CustomerDataController {
+public class CustomerDataController extends GenericController {
     
     @FXML
-    private Button b;
+    private Button btnSearch, btnExit;
+
+    @FXML
+    private Text customerIDText, accountsTable, totalBalanceText;
+
+    @FXML
+    private TableView <Account> accountsTableView;
 
     private Stage stage;
-
-    private static final Logger LOGGER = 
-        Logger.getLogger("package:");
 
     private static final String WINDOW_NAME = 
         "Customer's accounts and balances";
