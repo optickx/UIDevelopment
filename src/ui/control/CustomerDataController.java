@@ -1,5 +1,6 @@
 package ui.control;
 
+import clientside.controller.CustomerManager;
 import clientside.model.Account;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
@@ -27,6 +28,8 @@ public class CustomerDataController extends GenericController {
 
     private static final String WINDOW_NAME = 
         "Customer's accounts and balances";
+    
+    private CustomerManager customerManager;
         
 
     public void initStage(Parent root) {
@@ -43,16 +46,25 @@ public class CustomerDataController extends GenericController {
 
         stage.show();
     }
-
     /**
      * Prepare the stage for a change of scene
      * @param stage where the window shows
      */
-
      public void setStage(Stage stage) {
         this.stage = stage;
     }
-
+    /**
+     * sets the value of the object that manages and
+     * gets all the information from the server.
+     * @param customerManager object that implementates the interface
+     */
+    public void setCustomerManager(CustomerManager customerManager) {
+        this.customerManager = customerManager;
+    }
+    /**
+     * 
+     * @param event
+     */
     private void handlerWindowShowing(WindowEvent event) {
         LOGGER.info("Initializing UserWindowController::handlerWindowShowing");
     }
