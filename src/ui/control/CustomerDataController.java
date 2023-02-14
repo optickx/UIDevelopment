@@ -36,14 +36,12 @@ public class CustomerDataController extends GenericController {
        LOGGER.info("Initialazing " + WINDOW_NAME + " window."); 
        Scene scene = new Scene(root);
        stage.setScene(scene);
-
        stage.setScene(scene);
-
         // Set properties
         stage.setTitle(WINDOW_NAME);
         stage.setResizable(false);
         stage.setOnShowing(this::handlerWindowShowing);
-
+        // add property change listeners
         stage.show();
     }
     /**
