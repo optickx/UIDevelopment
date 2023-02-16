@@ -11,7 +11,7 @@
   prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.control.CustomerDataController">
    <children>
       <Text fx:id="txtCustomerID" layoutX="42.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer ID" />
-      <TextField fx:id="textFieldcustomerID" layoutX="42.0" layoutY="65.0" prefHeight="25.0" prefWidth="181.0" />
+      <TextField fx:id="txtFieldCustomerID" layoutX="42.0" layoutY="65.0" prefHeight="25.0" prefWidth="181.0" />
       <Button fx:id="btnSearch" layoutX="247.0" layoutY="65.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="Search" />
       <Text fx:id="txtAccountsTable" layoutX="42.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Accounts" />
       <TableView fx:id="accountsTableView" layoutX="46.0" layoutY="133.0" prefHeight="200.0" prefWidth="508.0">

@@ -23,7 +23,7 @@ public class CustomerDataController extends GenericController {
     private Text txtCustomerID, txtAccountsTable, txtTotalBalance;
 
     @FXML
-    private TextField txtFieldcustomerID, txtFieldTotalBalance;
+    private TextField txtFieldCustomerID, txtFieldTotalBalance;
 
     @FXML
     private TableView <Account> accountsTableView;
@@ -46,7 +46,10 @@ public class CustomerDataController extends GenericController {
         stage.setResizable(false);
         stage.setOnShowing(this::handlerWindowShowing);
         // add property change listeners
-        txtFieldTotalBalance.textProperty().addListener(this::handleTextChanged);
+        txtFieldCustomerID.textProperty().addListener(this::handleTextChanged);
+        // set elements status
+        txtFieldTotalBalance.setDisable(true);
+        
 
         stage.show();
     }
@@ -84,7 +87,21 @@ public class CustomerDataController extends GenericController {
     ObservableValue observable,
     String oldValue,
     String newValue) {
+
+        if (/* txtFieldTotalBalance.getText().trim().length() > this.MAX_LENGTH 
+        || */txtFieldCustomerID.getText().trim().length() > this.MAX_LENGTH) {
+            showErrorAlert("La longitud máxima es de " + this.MAX_LENGTH + " caracteres.");
+            btnSearch.setDisable(true);
+        }
+
+        else if (/* txtFieldTotalBalance.getText().trim().isEmpty()
+        ||  */txtFieldCustomerID.getText().trim().isEmpty()) 
+            btnSearch.setDisable(true);
         
+        else {
+            btnSearch.setDisable(false);
+            txtTotalBalance.setText("");
+        }
 
         
     }
