@@ -2,6 +2,7 @@ package ui.control;
 
 import clientside.controller.CustomerManager;
 import clientside.model.Account;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -19,7 +20,10 @@ public class CustomerDataController extends GenericController {
     private Button btnSearch, btnExit;
 
     @FXML
-    private Text customerIDText, accountsTable, totalBalanceText;
+    private Text txtCustomerID, txtAccountsTable, txtTotalBalance;
+
+    @FXML
+    private TextField txtFieldcustomerID, txtFieldTotalBalance;
 
     @FXML
     private TableView <Account> accountsTableView;
@@ -42,6 +46,8 @@ public class CustomerDataController extends GenericController {
         stage.setResizable(false);
         stage.setOnShowing(this::handlerWindowShowing);
         // add property change listeners
+        txtFieldTotalBalance.textProperty().addListener(this::handleTextChanged);
+
         stage.show();
     }
     /**
@@ -65,5 +71,21 @@ public class CustomerDataController extends GenericController {
      */
     private void handlerWindowShowing(WindowEvent event) {
         LOGGER.info("Initializing UserWindowController::handlerWindowShowing");
+    }
+
+    /**
+     * Text change event handler for login and name text fields.
+     * It enables or disables create and modify buttons depending on those fields state.
+     * @param observable the property being observed: TextProperty of TextField.
+     * @param oldValue   old String value for the property.
+     * @param newValue   new String value for the property.
+     */
+    private void handleTextChanged(
+    ObservableValue observable,
+    String oldValue,
+    String newValue) {
+        
+
+        
     }
 }

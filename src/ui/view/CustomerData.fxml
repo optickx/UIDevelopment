@@ -10,10 +10,10 @@
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" 
   prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.control.CustomerDataController">
    <children>
-      <Text fx:id="customerIDText" layoutX="42.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer ID" />
-      <TextField fx:id="customerIDTextField" layoutX="42.0" layoutY="65.0" prefHeight="25.0" prefWidth="181.0" />
+      <Text fx:id="txtCustomerID" layoutX="42.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customer ID" />
+      <TextField fx:id="textFieldcustomerID" layoutX="42.0" layoutY="65.0" prefHeight="25.0" prefWidth="181.0" />
       <Button fx:id="btnSearch" layoutX="247.0" layoutY="65.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="Search" />
-      <Text fx:id="accountsTableText" layoutX="42.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Accounts" />
+      <Text fx:id="txtAccountsTable" layoutX="42.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Accounts" />
       <TableView fx:id="accountsTableView" layoutX="46.0" layoutY="133.0" prefHeight="200.0" prefWidth="508.0">
         <columns>
           <TableColumn prefWidth="176.0" text="Account number" />
@@ -22,8 +22,8 @@
             <TableColumn prefWidth="119.199951171875" text="Balance" />
         </columns>
       </TableView>
-      <Text fx:id="totalBalanceText" layoutX="48.0" layoutY="373.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total balance" />
+      <Text fx:id="txtTotalBalance" layoutX="48.0" layoutY="373.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total balance" />
       <Button fx:id="btnExit" layoutX="407.0" layoutY="356.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" text="Exit" />
-      <TextField fx:id="totalBalanceTextField" editable="false" layoutX="149.0" layoutY="356.0" />
+      <TextField fx:id="txtFieldTotalBalance" editable="false" layoutX="149.0" layoutY="356.0" />
    </children>
 </Pane>
